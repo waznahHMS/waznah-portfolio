@@ -8,7 +8,7 @@
 
 This is my personal portfolio website — a curated showcase of my work, skills, and projects. It reflects my interdisciplinary background in network engineering, AI innovation, and international studies. The design is clean, editorial-inspired, and fully responsive.
 
-**Live Site:** [waznah.dev](https://waznah.dev) *(replace with your actual domain)*
+**Live Site:** [waznah.dev]([https://waznah.dev](https://waznah-portfolio.waznah-connect.workers.dev/)) 
 
 ---
 
