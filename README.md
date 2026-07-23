@@ -2,8 +2,6 @@
 
 > Personal portfolio and project showcase for Waznah binti Haji Mohd Sallehin.
 
-![Portfolio Screenshot](https://via.placeholder.com/800x400?text=Portfolio+Preview)
-
 ---
 
 ## About
