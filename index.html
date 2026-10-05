@@ -870,7 +870,26 @@
       font-style: italic;
     }
 
-    .research-card .badge-outstanding {
+    /* Two-badge row for distinctions */
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .badge-distinction {
+      display: inline-block;
+      background: var(--accent-blue);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-outstanding {
       display: inline-block;
       background: var(--accent-orange);
       color: #fff;
@@ -879,7 +898,6 @@
       padding: 4px 12px;
       border-radius: 20px;
       letter-spacing: 0.5px;
-      margin-bottom: 14px;
     }
 
     .research-themes {
@@ -896,6 +914,163 @@
       font-size: 12px;
       border: 1px solid var(--border-subtle);
       color: var(--text-muted);
+    }
+
+    /* ===== TEAM / PAPER EXPAND ===== */
+    .team-card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-top: 24px;
+    }
+
+    .team-card .team-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-orange);
+      margin-bottom: 10px;
+    }
+
+    .team-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    .team-card .team-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .team-member {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-light);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+    }
+
+    .team-member .flag {
+      font-size: 14px;
+    }
+
+    .team-member .role {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    .paper-reveal-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      background: var(--accent-blue);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .paper-reveal-btn:hover {
+      background: var(--accent-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 56, 189, 0.2);
+    }
+
+    .paper-reveal-btn i {
+      transition: transform 0.3s ease;
+    }
+
+    .paper-reveal-btn.open i {
+      transform: rotate(180deg);
+    }
+
+    .paper-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s ease, margin-top 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      margin-top: 0;
+    }
+
+    .paper-panel.open {
+      max-height: 2400px;
+      opacity: 1;
+      margin-top: 22px;
+    }
+
+    .paper-panel-inner {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 22px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .paper-panel-inner h5 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-dark);
+      margin: 18px 0 8px;
+    }
+
+    .paper-panel-inner h5:first-child {
+      margin-top: 0;
+    }
+
+    .paper-panel-inner p {
+      margin-bottom: 12px;
+    }
+
+    .paper-panel-inner ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .paper-panel-inner ul li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .paper-panel-inner ul li::before {
+      content: "—";
+      color: var(--accent-orange);
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    .paper-contrib-note {
+      background: rgba(0, 56, 189, 0.05);
+      border-left: 3px solid var(--accent-blue);
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 16px;
     }
 
     /* ===== FELLOWSHIPS TIMELINE ===== */
@@ -1429,6 +1604,15 @@
 
       .research-card {
         padding: 22px 18px;
+      }
+
+      .team-card {
+        padding: 20px 18px;
+      }
+
+      .team-member {
+        font-size: 11px;
+        padding: 5px 12px;
       }
     }
 
@@ -2036,9 +2220,12 @@
       </p>
 
       <div class="research-card">
-        <span class="badge-outstanding">Outstanding Fellow — AI for Asia Fellowship 2026</span>
+        <div class="badge-row">
+          <span class="badge-distinction">Capstone — Distinction Award</span>
+          <span class="badge-outstanding">Waznah — Outstanding Fellow</span>
+        </div>
         <h3 class="serif">Governing AI's Hidden Footprint: Data Centre Environmental Disclosure in Brunei and Malaysia toward an ASEAN Framework</h3>
-        <p class="authors">AI for Asia Fellowship 2026 Capstone · Ooi Rui Zhe, Waznah binti Haji Mohd Sallehin, Afrina Nur Evalina</p>
+        <p class="authors">AI for Asia Fellowship 2026 Capstone · Team <strong>7_Elevan</strong></p>
 
         <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">
           This capstone project examines the environmental impact of AI infrastructure, focusing on data centre
@@ -2056,10 +2243,97 @@
           <span>Responsible AI infrastructure</span>
           <span>Policy recommendations</span>
         </div>
+      </div>
 
-        <p style="font-size: 12px; color: var(--text-muted); margin-top: 16px; font-style: italic;">
-          Note: Publication status and policy adoption are not claimed. This is ongoing research work.
+      <!-- ===== TEAM / PAPER CARD ===== -->
+      <div class="team-card">
+        <div class="team-label">AI for Asia Fellowship 2026 · Capstone Team</div>
+        <h4>Team 7_Elevan</h4>
+        <p class="team-sub">
+          A cross-border trio working on AI infrastructure governance across Brunei and Malaysia —
+          curious what the paper actually covers? Open the summary below.
         </p>
+
+        <div class="team-members">
+          <div class="team-member">
+            <span class="flag">🇧🇳</span>
+            <span><strong>Waznah</strong></span>
+            <span class="role">— Brunei lead · Outstanding Fellow</span>
+          </div>
+          <div class="team-member">
+            <span class="flag">🇲🇾</span>
+            <span><strong>Rui Zhe</strong></span>
+            <span class="role">— Malaysia</span>
+          </div>
+          <div class="team-member">
+            <span class="flag">🇲🇾</span>
+            <span><strong>Afrina</strong></span>
+            <span class="role">— Malaysia</span>
+          </div>
+        </div>
+
+        <button class="paper-reveal-btn" id="paperToggle" aria-expanded="false" aria-controls="paperPanel">
+          <span id="paperToggleLabel">Want to know what the paper covers?</span>
+          <i data-lucide="chevron-down" size="16"></i>
+        </button>
+
+        <div class="paper-panel" id="paperPanel">
+          <div class="paper-panel-inner">
+            <h5>What the paper is about</h5>
+            <p>
+              As AI adoption accelerates across Southeast Asia, the physical infrastructure behind it — data centres —
+              has quietly become one of the region's fastest-growing sources of energy demand and environmental
+              impact. Yet disclosure and governance frameworks have not kept pace.
+            </p>
+            <p>
+              Our paper asks: <em>how can Brunei and Malaysia move toward transparent, comparable environmental
+              disclosure for AI-related data centre infrastructure — and what would an ASEAN-level framework look
+              like?</em>
+            </p>
+
+            <h5>Key questions we explored</h5>
+            <ul>
+              <li>What do current data centre environmental disclosure practices look like in Brunei and Malaysia?</li>
+              <li>Where are the gaps in existing regulation and reporting standards?</li>
+              <li>How does AI-driven demand shape energy consumption patterns in the region?</li>
+              <li>What could an ASEAN-level governance framework for responsible AI infrastructure include?</li>
+            </ul>
+
+            <h5>Methodology</h5>
+            <ul>
+              <li>Comparative policy and regulatory review across Brunei and Malaysia</li>
+              <li>Qualitative analysis of disclosure practices and governance frameworks</li>
+              <li>Review of existing regional and international environmental reporting standards</li>
+              <li>Synthesis of policy recommendations toward an ASEAN framework</li>
+            </ul>
+
+            <h5>What we produced</h5>
+            <ul>
+              <li>A comparative analysis of Brunei's and Malaysia's current disclosure landscape</li>
+              <li>Policy recommendations for strengthening environmental transparency in AI infrastructure</li>
+              <li>A proposed direction for an ASEAN-level governance framework for responsible AI infrastructure</li>
+            </ul>
+
+            <h5>Why it matters</h5>
+            <p>
+              AI's environmental footprint is often invisible in policy conversations. This paper contributes to the
+              emerging conversation on responsible AI infrastructure — connecting technology, climate, and regional
+              governance across Southeast Asia.
+            </p>
+
+            <div class="paper-contrib-note">
+              <strong>My contribution:</strong> I focused on the Brunei side of the research — covering Brunei's
+              current disclosure landscape, its position within ASEAN, and how it might engage with a future
+              regional framework. The capstone received a <strong>Distinction Award</strong> under the AI for Asia
+              Fellowship 2026, and I was personally recognised as an <strong>Outstanding Fellow</strong>.
+            </div>
+
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 16px; font-style: italic;">
+              Note: This summary is for informational purposes. Publication status and policy adoption are not
+              claimed. Full paper is not publicly available at this time.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -2080,8 +2354,9 @@
             <h4>AI for Asia Fellowship 2026</h4>
             <div class="tl-org">Siklab Pilipinas + National Youth Council Singapore</div>
             <p>
-              <strong>Outstanding Fellow.</strong> Capstone project received Outstanding Fellow recognition.
-              Research focus: AI infrastructure, environmental disclosure and ASEAN governance.
+              <strong>Outstanding Fellow (personal recognition).</strong> Team <strong>7_Elevan</strong> capstone
+              received a <strong>Distinction Award</strong>. Research focus: AI infrastructure, environmental
+              disclosure and ASEAN governance.
             </p>
           </div>
         </div>
@@ -2128,7 +2403,10 @@
         <div class="rec-icon"><i data-lucide="award" size="40"></i></div>
         <div class="rec-text">
           <h4>Outstanding Fellow — AI for Asia Fellowship 2026</h4>
-          <p>Recognised for capstone research on AI infrastructure, environmental disclosure and ASEAN governance.</p>
+          <p>
+            Personal recognition as Outstanding Fellow. Team 7_Elevan's capstone received a Distinction Award for
+            research on AI infrastructure, environmental disclosure and ASEAN governance.
+          </p>
         </div>
       </div>
     </section>
@@ -2501,6 +2779,21 @@
       // Replace '#' with the actual i.lec URL when available
       // window.open('https://your-ilec-url-here', '_blank');
       alert('i.lec early-stage experience link is configurable. Insert the actual URL when ready.');
+    });
+
+    // --- Paper Reveal Toggle ---
+    const paperToggle = document.getElementById('paperToggle');
+    const paperPanel = document.getElementById('paperPanel');
+    const paperToggleLabel = document.getElementById('paperToggleLabel');
+
+    paperToggle.addEventListener('click', () => {
+      const isOpen = paperPanel.classList.toggle('open');
+      paperToggle.classList.toggle('open', isOpen);
+      paperToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      paperToggleLabel.textContent = isOpen
+        ? 'Hide paper summary'
+        : 'Want to know what the paper covers?';
+      lucide.createIcons();
     });
   </script>
 
