@@ -8,20 +8,8 @@
 
 This is my personal portfolio website — a curated showcase of my work, skills, and projects. It reflects my interdisciplinary background in network engineering, AI innovation, and international studies. The design is clean, editorial-inspired, and fully responsive.
 
-**Live Site:** [waznah.dev]([https://waznah.dev](https://waznah-portfolio.waznah-connect.workers.dev/) 
+(https://waznah-portfolio.waznah-connect.workers.dev/) 
 
----
-
-## Projects Featured
-
-| Project | Category | Description |
-|---------|----------|-------------|
-| [i.lec Enterprise](https://www.instagram.com/ilec.bn/) | Founder | AI-powered preventive mental wellness platform |
-| [MindBridge](http://mindbridge-connect.com/) | Founder | Mental health practitioner-client management system |
-| [Projek Isyarat](https://www.instagram.com/bridgingsilence.etoiles/) | Initiative | Sign language advocacy campaign |
-| [Game Dev Course](https://vsgi.gmu.edu/brunei/) | Program | 14-week game dev program by US Embassy & George Mason University |
-| [FolioWeave](https://folioweave.talktoilec.workers.dev) | Shelved | AI-powered Cultural Intelligence Platform (ASEAN-France) |
-| [Unseen Borneo](https://github.com/yourusername/unseen-borneo) | Hackathon | AR Heritage Badge Collection Experience |
 
 ---
 
